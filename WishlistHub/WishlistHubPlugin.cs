@@ -48,8 +48,9 @@ namespace WishlistHub
 
         private async Task SendGamesAsync()
         {
-            var settingsVm = GetSettings(false) as WishlistHubSettingsViewModel;
-            var settings = settingsVm?.Settings;
+            var settingsVm = _settings ?? new WishlistHubSettingsViewModel(this);
+            _settings = settingsVm;
+            var settings = settingsVm.Settings;
             if (settings == null || string.IsNullOrWhiteSpace(settings.AuthenticationToken))
             {
                 PlayniteApi.Dialogs.ShowErrorMessage(
