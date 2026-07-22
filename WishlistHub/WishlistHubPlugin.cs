@@ -81,13 +81,13 @@ namespace WishlistHub
             {
                 Description = "Enviar jogos ao Wishlist Hub",
                 MenuSection = "@Wishlist Hub",
-                Action = _ => _ = SendSelectedOrAllAsync(null, showDialog: true),
+                Action = a => { _ = SendSelectedOrAllAsync(null, showDialog: true); },
             };
             yield return new MainMenuItem
             {
                 Description = "Processar fila automática agora",
                 MenuSection = "@Wishlist Hub",
-                Action = _ => _queue.ProcessInBackground(),
+                Action = a => _queue.ProcessInBackground(),
             };
         }
 
@@ -97,7 +97,7 @@ namespace WishlistHub
             {
                 Description = "Enviar ao Wishlist Hub",
                 MenuSection = "Wishlist Hub",
-                Action = a => _ = SendSelectedOrAllAsync(a.Games, showDialog: true),
+                Action = a => { _ = SendSelectedOrAllAsync(a.Games, showDialog: true); },
             };
         }
 

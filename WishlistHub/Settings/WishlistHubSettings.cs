@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Playnite.SDK.Data;
 
 namespace WishlistHub.Settings
