@@ -1,0 +1,14 @@
+Id: WishlistHub_Playnite
+Name: Wishlist Hub
+Author: Wishlist Hub
+Version: 1.0.0
+Module: WishlistHub.dll
+Type: GenericPlugin
+Icon: icon.png
+Links:
+  - Name: Website
+    Url: https://wishlist-hub.paz.poa.br
+  - Name: Source
+    Url: https://github.com/niagaevil/wishlist-hub-playnite
+  - Name: Help
+    Url: https://wishlist-hub.paz.poa.br/ajuda#playnite
