@@ -4,7 +4,7 @@ Fonte oficial: [JosefNemec/PlayniteAddonDatabase](https://github.com/JosefNemec/
 
 ## Pré-requisitos
 
-1. Release GitHub `v1.1.0` com o arquivo `WishlistHub_Playnite_1_1_0.pext`
+1. Release GitHub `v1.1.1` com o arquivo `WishlistHub_Playnite_1_1_1.pext`
 2. `ci/installer_manifest.yaml` apontando para o `PackageUrl` da release (já preparado)
 3. Validar com Toolbox: `Toolbox.exe verify installer ci\installer_manifest.yaml` e `Toolbox.exe verify addon ci\addon_browser_manifest.yaml`
 

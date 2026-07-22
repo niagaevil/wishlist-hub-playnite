@@ -24,13 +24,15 @@ namespace WishlistHub.Settings
         public string AuthenticationToken
         {
             get => _authenticationToken;
-            set => SetValue(ref _authenticationToken, value);
+            set => SetValue(ref _authenticationToken, (value ?? string.Empty).Trim());
         }
 
         public string BaseUrl
         {
             get => _baseUrl;
-            set => SetValue(ref _baseUrl, value);
+            set => SetValue(ref _baseUrl, string.IsNullOrWhiteSpace(value)
+                ? "https://wishlist-hub.paz.poa.br"
+                : value.Trim().TrimEnd('/'));
         }
 
         /// <summary>Envia jogos novos ao Hub após adicionar na biblioteca do Playnite.</summary>

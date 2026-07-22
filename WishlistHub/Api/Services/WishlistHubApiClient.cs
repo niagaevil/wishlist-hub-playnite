@@ -25,10 +25,12 @@ namespace WishlistHub.Api.Services
         {
             _settings = settings;
             _httpClient = new HttpClient { Timeout = TimeSpan.FromMinutes(5) };
+            // Hub espera camelCase (token/data/version). DefaultContractResolver
+            // serializava PascalCase e o import falhava com "Token ausente".
             _jsonSettings = new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Ignore,
-                ContractResolver = new DefaultContractResolver(),
+                ContractResolver = new CamelCasePropertyNamesContractResolver(),
                 Converters = { new Newtonsoft.Json.Converters.StringEnumConverter() },
             };
         }
@@ -48,7 +50,7 @@ namespace WishlistHub.Api.Services
             {
                 var request = new ImportRequest
                 {
-                    Token = _settings.AuthenticationToken,
+                    Token = (_settings.AuthenticationToken ?? string.Empty).Trim(),
                     Data = JsonConvert.SerializeObject(batch, _jsonSettings),
                 };
                 var body = JsonConvert.SerializeObject(request, _jsonSettings);
