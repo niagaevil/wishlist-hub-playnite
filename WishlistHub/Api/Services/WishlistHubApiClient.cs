@@ -29,6 +29,7 @@ namespace WishlistHub.Api.Services
             {
                 NullValueHandling = NullValueHandling.Ignore,
                 ContractResolver = new DefaultContractResolver(),
+                Converters = { new Newtonsoft.Json.Converters.StringEnumConverter() },
             };
         }
 
