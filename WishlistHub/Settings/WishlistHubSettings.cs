@@ -6,6 +6,9 @@ namespace WishlistHub.Settings
     {
         private string _authenticationToken = string.Empty;
         private string _baseUrl = "https://wishlist-hub.paz.poa.br";
+        private bool _syncNewlyAddedGames = true;
+        private bool _useStatusTags = true;
+        private bool _showNotifications = true;
         private bool _includeSteam = true;
         private bool _includeEpic = true;
         private bool _includeGog = true;
@@ -28,6 +31,25 @@ namespace WishlistHub.Settings
         {
             get => _baseUrl;
             set => SetValue(ref _baseUrl, value);
+        }
+
+        /// <summary>Envia jogos novos ao Hub após adicionar na biblioteca do Playnite.</summary>
+        public bool SyncNewlyAddedGames
+        {
+            get => _syncNewlyAddedGames;
+            set => SetValue(ref _syncNewlyAddedGames, value);
+        }
+
+        public bool UseStatusTags
+        {
+            get => _useStatusTags;
+            set => SetValue(ref _useStatusTags, value);
+        }
+
+        public bool ShowNotifications
+        {
+            get => _showNotifications;
+            set => SetValue(ref _showNotifications, value);
         }
 
         public bool IncludeSteam { get => _includeSteam; set => SetValue(ref _includeSteam, value); }

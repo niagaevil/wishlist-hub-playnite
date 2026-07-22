@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,9 +51,20 @@
     <Compile Include="Api\Models\ImportResponse.cs" />
     <Compile Include="Api\Services\LibraryToHubLauncherMap.cs" />
     <Compile Include="Api\Services\WishlistHubApiClient.cs" />
+    <Compile Include="Queue\ImportQueue.cs" />
+    <Compile Include="Services\WishlistHubTags.cs" />
     <Compile Include="Settings\WishlistHubSettings.cs" />
     <Compile Include="Settings\WishlistHubSettingsViewModel.cs" />
+    <Compile Include="Settings\WishlistHubSettingsView.xaml.cs">
+      <DependentUpon>WishlistHubSettingsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Settings\WishlistHubSettingsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="extension.yaml">

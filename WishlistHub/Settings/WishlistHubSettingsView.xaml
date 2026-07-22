@@ -1,0 +1,42 @@
+<UserControl x:Class="WishlistHub.Settings.WishlistHubSettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="480" d:DesignWidth="520">
+  <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="8">
+    <StackPanel>
+      <TextBlock Text="Autenticação" FontWeight="SemiBold" Margin="0,0,0,6"/>
+      <TextBlock TextWrapping="Wrap" Opacity="0.8" Margin="0,0,0,8"
+                 Text="Gere o token em Wishlist Hub → Ferramentas → Importar via Playnite e cole abaixo."/>
+      <TextBlock Text="Authentication Token"/>
+      <TextBox Text="{Binding Settings.AuthenticationToken}" Margin="0,2,0,10"/>
+      <TextBlock Text="Base URL"/>
+      <TextBox Text="{Binding Settings.BaseUrl}" Margin="0,2,0,16"/>
+
+      <TextBlock Text="Sync automática" FontWeight="SemiBold" Margin="0,0,0,6"/>
+      <CheckBox Content="Enviar jogos novos automaticamente (após metadata)"
+                IsChecked="{Binding Settings.SyncNewlyAddedGames}" Margin="0,0,0,4"/>
+      <CheckBox Content="Marcar tags de status no Playnite ([WishlistHub] …)"
+                IsChecked="{Binding Settings.UseStatusTags}" Margin="0,0,0,4"/>
+      <CheckBox Content="Mostrar notificações"
+                IsChecked="{Binding Settings.ShowNotifications}" Margin="0,0,0,16"/>
+
+      <TextBlock Text="Bibliotecas a enviar" FontWeight="SemiBold" Margin="0,0,0,6"/>
+      <WrapPanel>
+        <CheckBox Content="Steam" IsChecked="{Binding Settings.IncludeSteam}" Margin="0,0,12,6"/>
+        <CheckBox Content="Epic" IsChecked="{Binding Settings.IncludeEpic}" Margin="0,0,12,6"/>
+        <CheckBox Content="GOG" IsChecked="{Binding Settings.IncludeGog}" Margin="0,0,12,6"/>
+        <CheckBox Content="Ubisoft" IsChecked="{Binding Settings.IncludeUbisoft}" Margin="0,0,12,6"/>
+        <CheckBox Content="Amazon / Prime" IsChecked="{Binding Settings.IncludeAmazon}" Margin="0,0,12,6"/>
+        <CheckBox Content="EA" IsChecked="{Binding Settings.IncludeEa}" Margin="0,0,12,6"/>
+        <CheckBox Content="Battle.net" IsChecked="{Binding Settings.IncludeBattleNet}" Margin="0,0,12,6"/>
+        <CheckBox Content="Microsoft / Xbox" IsChecked="{Binding Settings.IncludeMicrosoft}" Margin="0,0,12,6"/>
+        <CheckBox Content="Rockstar" IsChecked="{Binding Settings.IncludeRockstar}" Margin="0,0,12,6"/>
+        <CheckBox Content="itch.io" IsChecked="{Binding Settings.IncludeItch}" Margin="0,0,12,6"/>
+        <CheckBox Content="Outros" IsChecked="{Binding Settings.IncludeOther}" Margin="0,0,12,6"/>
+      </WrapPanel>
+    </StackPanel>
+  </ScrollViewer>
+</UserControl>
