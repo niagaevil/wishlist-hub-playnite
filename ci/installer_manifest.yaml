@@ -5,15 +5,15 @@ Packages:
     ReleaseDate: 2026-07-22
     PackageUrl: https://github.com/niagaevil/wishlist-hub-playnite/releases/download/v1.1.1/WishlistHub_Playnite_1_1_1.pext
     Changelog:
-      - Fix: JSON camelCase no import (Token ausente / inválido)
-      - Trim do token e Base URL nas settings
+      - "Fix: JSON camelCase no import (Token ausente / inválido)"
+      - "Trim do token e Base URL nas settings"
   - Version: 1.1.0
     RequiredApiVersion: 6.11.0
     ReleaseDate: 2026-07-22
     PackageUrl: https://github.com/niagaevil/wishlist-hub-playnite/releases/download/v1.1.0/WishlistHub_Playnite_1_1_0.pext
     Changelog:
-      - Sync automática ao adicionar jogos (com debounce/fila)
-      - Tags de status [WishlistHub] Synced / Miss / Ignored / Error
-      - Tela de settings (token, Base URL, bibliotecas, toggles)
-      - Menu de jogo e Extensions → enviar / processar fila
-      - Preparação para addon browser do Playnite
+      - "Sync automática ao adicionar jogos (com debounce/fila)"
+      - "Tags de status [WishlistHub] Synced / Miss / Ignored / Error"
+      - "Tela de settings (token, Base URL, bibliotecas, toggles)"
+      - "Menu de jogo e Extensions → enviar / processar fila"
+      - "Preparação para addon browser do Playnite"
