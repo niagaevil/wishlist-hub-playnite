@@ -1,0 +1,6 @@
+<!-- Copie para Directory.Build.props e ajuste o caminho do Playnite instalado. -->
+<Project>
+  <PropertyGroup>
+    <PlayniteDir Condition="'$(PlayniteDir)' == ''">C:\Users\Public\Documents\Playnite</PlayniteDir>
+  </PropertyGroup>
+</Project>
